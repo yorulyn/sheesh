@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LOGIN PAGE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+  body{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('bg.jpg');
+  height: 100vh;
+  overflow: hidden;
+  }
+  
+  .center{
+  position: absolute;
+  border: 2px solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  background: transparent;
+  border-radius: 20px;
+  }
+  
+  .center h1{
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid rgb(19, 19, 19);
+  }
+  
+  .center form{
+  padding: 0 40px;
+  box-sizing: border-box;
+  }
+  
+  form .txt_field{
+  position: relative;
+  border-bottom:3px solid #2a2929;
+  margin: 25px 0;
+  }
+  
+  .txt_field input{
+  width: 100%;
+  padding: 0 10px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+  }
+  
+  .txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #37251b;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  }
+  
+  .txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: #d2c1b0;
+  transition: .5s;
+  }
+  
+  .txt_field input:focus ~ label,
+  .txt_field input:valid ~ label{
+  top: -5px;
+  color: #37251b;
+  }
+  
+  .txt_field input:focus ~ span::before,
+  .txt_field input:Valid ~ span::before{
+  width: 100%;
+  }
+  
+  .pass{
+  margin: -5px 0 20px 5px;
+  color: #37251b;
+  cursor: pointer;
+  }
+  
+  .pass:hover{
+  text-decoration: underline;
+  }
+  
+  button[type="Submit"]{
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  background: none;
+  
+  }
+  
+  button[type="Submit"]:hover{
+  background: transparent;
+  color: none;
+  transition: .5s;
+  }
+  
+  .signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #37251b;
+  }
+  
+  .signup_link a{
+  color: none;
+  text-decoration: none;
+  }
+  
+  .signup_link a:hover{
+  text-decoration: none<<;
+  }
+  
+  .HomeAbout{
+  width: 100vw;
+  height: 25vh;
+  }
+  </style>
+  <body>
+    <div class="container">
+      <div class="center">
+          <h1>LOG IN</h1>
+          <form action="home.html" method="get">
+              <div class="txt_field">
+                  <input type="text" name="text" required>
+                  <span></span>
+                  <label>Username</label>
+              </div>
+              <div class="txt_field">
+                  <input type="password" name="password" required>
+                  <span></span>
+                  <label>Password</label>
+              </div>
+              <div class="pass">
+              <a id="ForgotPassword" href="fpass.html"><i>Forgot Password?</i></a>
+              </div>
+              
+              <button type="submit" id="btn" name="login">Login</button>
+              
+              <div class="signup_link">
+                  Doesn't have an account? <a href="signup.html"><i>Signup</i></a>
+              </div>
+          </form>
+      </div>
+    </div>
+  </body>
+</html>
